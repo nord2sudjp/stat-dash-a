@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    AAAA
     <Header />
     <Sidebar />
     <Main />
-    <HelloWorld />
   </div>
 </template>
 
