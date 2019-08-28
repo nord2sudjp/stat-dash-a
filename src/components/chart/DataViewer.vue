@@ -6,7 +6,7 @@
         <tr v-for="rec in recs">
           <th>{{rec.area}}</th>
           <td>{{rec["year"]}}</td>
-          <td>{{rec[target]}}</td>
+          <td>{{rec[target] | delimiter}}</td>
         </tr>
       </table>
     </div>
@@ -28,7 +28,13 @@ export default {
       return this.$store.getters["loader/dataRecords"];
     }
   },
-  methods: {}
+  methods: {},
+  filters: {
+    delimiter: function(value) {
+      if (!value) return "";
+      return value.toLocaleString();
+    }
+  }
 };
 </script>
 
