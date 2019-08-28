@@ -1,4 +1,6 @@
-import Vue from 'vue'
+import Vue from 'vue';
+
+const namespaced = true;
 
 const state = {
     count: 0
@@ -23,6 +25,7 @@ const getters = {
 }
 
 export default {
+    namespaced,
     state,
     mutations,
     actions,
