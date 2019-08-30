@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="viewer">
     DataViewer
     <div class="rec">
       <table class="table table-bordered">

@@ -44,6 +44,18 @@ const getters = {
     },
     dataRecords: state => {
         return state.dataRecords
+    },
+    dataset: state => {
+        if (!state.statType) return null;
+        var keyFields = state.db[state.statType].keys;
+        var targetFields = state.db[state.statType].fields;
+
+        var ds = {
+            "keys": keyFields,
+            "fields": targetFields,
+            "data": state.dataRecords
+        }
+        return ds
     }
 }
 

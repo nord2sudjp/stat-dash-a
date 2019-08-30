@@ -1,5 +1,5 @@
 <template>
-  <nav id="left-sidebar" class="contents">
+  <nav id="left-sidebar" class="left-sidebar">
     <div class="sidebar-header">
       <h3>統計データ</h3>
     </div>
@@ -31,8 +31,12 @@
           class="dropdown-toggle"
         >自然環境</a>
         <ul class="collapse list-unstyled" id="pageShizen">
-          <li>面積:>面積</li>
-          <li>可住面積:可住面積</li>
+          <li>
+            <a @click="setStat('面積')">面積</a>
+          </li>
+          <li>
+            <a @click="setStat('可住面積')">可住面積</a>
+          </li>
         </ul>
       </li>
 
